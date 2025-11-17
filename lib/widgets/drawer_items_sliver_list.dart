@@ -4,14 +4,14 @@ import '../generated/assets.dart';
 import '../models/drawer_item_model.dart';
 import 'drawer_item.dart';
 
-class DrawerItemsListView extends StatefulWidget {
-  const DrawerItemsListView({super.key});
+class DrawerItemsSliverList extends StatefulWidget {
+  const DrawerItemsSliverList({super.key});
 
   @override
-  State<DrawerItemsListView> createState() => _DrawerItemsListViewState();
+  State<DrawerItemsSliverList> createState() => _DrawerItemsSliverListState();
 }
 
-class _DrawerItemsListViewState extends State<DrawerItemsListView> {
+class _DrawerItemsSliverListState extends State<DrawerItemsSliverList> {
   final List<DrawerItemModel> items = const [
     DrawerItemModel(icon: Assets.iconsDashboard, title: 'Dashboard'),
     DrawerItemModel(icon: Assets.iconsMyTransaction, title: 'My Transaction'),
@@ -24,10 +24,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.zero,
-      shrinkWrap: true,
+    return SliverList.builder(
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
@@ -39,7 +36,10 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
           },
           child: Padding(
             padding: const EdgeInsets.only(top: 20.0),
-            child: DrawerItem(item: items[index], isActive: index == activeIndex),
+            child: DrawerItem(
+              item: items[index],
+              isActive: index == activeIndex,
+            ),
           ),
         );
       },
