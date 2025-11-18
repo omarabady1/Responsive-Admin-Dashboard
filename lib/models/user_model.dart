@@ -3,6 +3,6 @@ class UserModel {
   final String name;
   final String email;
 
-  UserModel({required this.image, required this.name, required this.email});
+  const UserModel({required this.image, required this.name, required this.email});
 
 }
