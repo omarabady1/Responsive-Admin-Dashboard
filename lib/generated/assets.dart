@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String assetsIconsCardBackground =
+      'assets/icons/card_background.png';
+  static const String fontsMontserratRegular =
+      'assets/fonts/Montserrat-Regular.ttf';
   static const String iconsBalance = 'assets/icons/balance.svg';
   static const String iconsCardBackground = 'assets/icons/card-background.svg';
   static const String iconsCardReceive = 'assets/icons/card-receive.svg';
@@ -17,5 +21,4 @@ class Assets {
   static const String iconsSetting = 'assets/icons/setting.svg';
   static const String iconsStatistics = 'assets/icons/statistics.svg';
   static const String iconsWallet = 'assets/icons/wallet.svg';
-
 }
