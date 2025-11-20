@@ -5,41 +5,24 @@ import '../models/card_model.dart';
 import 'card_item.dart';
 
 class MyCardsPageView extends StatelessWidget {
-  const MyCardsPageView({super.key});
+  const MyCardsPageView({
+    super.key,
+    required this.pageController,
+    required this.cards,
+  });
+
+  final PageController pageController;
+  final List<CardModel> cards;
 
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView(
+      controller: pageController,
       scrollDirection: Axis.horizontal,
       children: List.generate(
-        3,
-        (index) => CardItem(
-          card: CardModel(
-            holderName: 'Omar Abady',
-            cardNumber: '5078 2435 7685 1906',
-            expiredDate: '03/28',
-            cvv: '562',
-          ),
-        ),
+        cards.length,
+        (index) => CardItem(card: cards[index]),
       ),
     );
-
-    // return AspectRatio(
-    //   aspectRatio: 420 / 215,
-    //   child: PageView.builder(
-    //     itemBuilder: (context, index) {
-    //       return CardItem(
-    //         card: CardModel(
-    //           holderName: 'Omar Abady',
-    //           cardNumber: '5078 2435 7685 1906',
-    //           expiredDate: '03/28',
-    //           cvv: '562',
-    //         ),
-    //       );
-    //     },
-    //     itemCount: 3,
-    //     scrollDirection: Axis.horizontal,
-    //   ),
-    // );
   }
 }

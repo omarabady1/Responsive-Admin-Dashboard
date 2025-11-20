@@ -4,7 +4,7 @@ class CardModel {
   final String expiredDate;
   final String cvv;
 
-  CardModel({
+  const CardModel({
     required this.holderName,
     required this.cardNumber,
     required this.expiredDate,
