@@ -12,8 +12,10 @@ class CardItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 4),
         decoration: ShapeDecoration(
           image: DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(Assets.assetsIconsCardBackground),
           ),
           color: const Color(0xFF4EB7F2),
