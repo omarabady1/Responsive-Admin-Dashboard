@@ -1,10 +1,28 @@
 import 'package:flutter/material.dart';
-
+import 'package:responsive_admin_dashboard/models/transaction_item_model.dart';
+import 'package:responsive_admin_dashboard/widgets/transactions_list.dart';
 import '../utils/app_styles.dart';
 
 class TransactionHistorySection extends StatelessWidget {
   const TransactionHistorySection({super.key});
-
+  final List<TransactionItemModel> transactionsList = const [
+    TransactionItemModel(
+      title: 'Cash Withdrawal',
+      amount: 20135,
+      date: '22 November 2025',
+      isWithdrawal: true,
+    ),
+    TransactionItemModel(
+      title: 'Landing Page project',
+      amount: 2000,
+      date: '22 November 2025',
+    ),
+    TransactionItemModel(
+      title: 'Mobile App project',
+      amount: 20135,
+      date: '22 November 2025',
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,13 +30,7 @@ class TransactionHistorySection extends StatelessWidget {
       children: [
         TransactionHistoryHeader(),
         SizedBox(height: 20),
-        Text(
-          '21 November 2022',
-          style: AppStyle.styleMedium16.copyWith(
-            color: const Color(0xFFAAAAAA),
-          ),
-        ),
-
+        TransactionItemsList(transactionsList: transactionsList),
       ],
     );
   }
