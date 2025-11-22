@@ -7,28 +7,26 @@ class CardAndTransactionHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 40),
-          Container(
-            padding: EdgeInsets.all(24),
-            decoration: ShapeDecoration(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-            ),
-            child: Column(
-              children: [
-                MyCardsSection(),
-                Divider(height: 40, color: const Color(0xffF1F1F1)),
-                TransactionHistorySection(),
-              ],
+    return Column(
+      children: [
+        SizedBox(height: 40),
+        Container(
+          padding: EdgeInsets.all(24),
+          decoration: ShapeDecoration(
+            color: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
             ),
           ),
-        ],
-      ),
+          child: Column(
+            children: [
+              MyCardsSection(),
+              Divider(height: 40, color: const Color(0xffF1F1F1)),
+              TransactionHistorySection(),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
