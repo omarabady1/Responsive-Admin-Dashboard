@@ -11,6 +11,7 @@ class TransactionItemsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: transactionsList.length,
       itemBuilder: (context, index) {

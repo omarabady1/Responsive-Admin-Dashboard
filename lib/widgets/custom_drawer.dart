@@ -10,44 +10,47 @@ class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: UserInfoListTile(
-              user: UserModel(
-                image: Assets.iconsFrame3,
-                name: 'soma el3ashe2',
-                email: 'soma2010@yahoo.com',
+    return SafeArea(
+      child: Container(
+        width: MediaQuery.sizeOf(context).width * 0.7,
+        color: Colors.white,
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: UserInfoListTile(
+                user: UserModel(
+                  image: Assets.iconsFrame3,
+                  name: 'soma el3ashe2',
+                  email: 'soma2010@yahoo.com',
+                ),
               ),
             ),
-          ),
-          DrawerItemsSliverList(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              children: [
-                SizedBox(height: 20),
-                Expanded(child: SizedBox()),
-                InActiveItem(
-                  item: DrawerItemModel(
-                    icon: Assets.iconsSetting,
-                    title: 'Settings',
+            DrawerItemsSliverList(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  Expanded(child: SizedBox()),
+                  InActiveItem(
+                    item: DrawerItemModel(
+                      icon: Assets.iconsSetting,
+                      title: 'Settings',
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                InActiveItem(
-                  item: DrawerItemModel(
-                    icon: Assets.iconsLogout,
-                    title: 'Logout',
+                  SizedBox(height: 20),
+                  InActiveItem(
+                    item: DrawerItemModel(
+                      icon: Assets.iconsLogout,
+                      title: 'Logout',
+                    ),
                   ),
-                ),
-                SizedBox(height: 48),
-              ],
+                  SizedBox(height: 48),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

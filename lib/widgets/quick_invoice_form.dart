@@ -44,7 +44,7 @@ class QuickInvoiceForm extends StatelessWidget {
             Expanded(
               child: CustomButton(
                 buttonColor: Colors.white,
-                text: Text('Add more details', style: AppStyle.styleSemiBold18),
+                text: Text('Add more details', style: AppStyle.styleSemiBold18, textAlign: TextAlign.center,),
               ),
             ),
             SizedBox(width: 24),
@@ -54,6 +54,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 text: Text(
                   'Send money',
                   style: AppStyle.styleSemiBold18.copyWith(color: Colors.white),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
