@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/utils/app_styles.dart';
+import 'package:responsive_admin_dashboard/widgets/income_categories.dart';
+import 'package:responsive_admin_dashboard/widgets/income_chart.dart';
 
 import 'custom_drop_down_menu.dart';
 
@@ -16,15 +18,32 @@ class IncomeSection extends StatelessWidget {
       ),
       child: Column(
         children: [
+          IncomeSectionHeader(),
+          SizedBox(height: 16),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Income', style: AppStyle.styleSemiBold20),
-              CustomDropDownMenu(),
+              Expanded(child: IncomeChart()),
+              SizedBox(width: 20),
+              Expanded(flex: 2, child: IncomeCategories()),
             ],
           ),
         ],
       ),
+    );
+  }
+}
+
+class IncomeSectionHeader extends StatelessWidget {
+  const IncomeSectionHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text('Income', style: AppStyle.styleSemiBold20),
+        CustomDropDownMenu(),
+      ],
     );
   }
 }
