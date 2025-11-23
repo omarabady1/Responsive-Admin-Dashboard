@@ -9,7 +9,6 @@ class CardAndTransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 40),
         Container(
           padding: EdgeInsets.all(24),
           decoration: ShapeDecoration(
