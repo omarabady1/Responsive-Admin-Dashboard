@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.2
   expandable_page_view: ^1.0.17
+  fl_chart: ^1.1.1
 
 dev_dependencies:
   flutter_test:
