@@ -7,6 +7,7 @@ import 'package:responsive_admin_dashboard/utils/app_styles.dart';
 class CardItem extends StatelessWidget {
   const CardItem({super.key, required this.card});
   final CardModel card;
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -26,50 +27,34 @@ class CardItem extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.only(top: 20, bottom: 27, left: 31, right: 24),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Holder Name',
-                        style: AppStyle.styleRegular16.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(card.holderName, style: AppStyle.styleMedium20),
-                    ],
-                  ),
-                  SvgPicture.asset(Assets.iconsGallery),
-                ],
-              ),
-
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
                   Text(
-                    card.cardNumber,
-                    style: AppStyle.styleSemiBold24.copyWith(
+                    card.holderName,
+                    style: AppStyle.styleRegular16.copyWith(
                       color: Colors.white,
                     ),
                   ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        '${card.expiredDate} - ${card.cvv}',
-                        style: AppStyle.styleRegular16.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+                  SvgPicture.asset(Assets.iconsGallery, height: 22),
                 ],
+              ),
+
+              SizedBox(height: 20),
+
+              Text(
+                card.cardNumber,
+                style: AppStyle.styleSemiBold24.copyWith(color: Colors.white),
+              ),
+
+              SizedBox(height: 8),
+
+              Text(
+                '${card.expiredDate} - ${card.cvv}',
+                style: AppStyle.styleRegular16.copyWith(color: Colors.white),
               ),
             ],
           ),
