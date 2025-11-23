@@ -13,7 +13,12 @@ class DesktopLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
-        Expanded(flex: 2, child: AllExpensesAndQuickInvoiceSection()),
+        Expanded(flex: 2, child: Column(
+          children: [
+            SizedBox(height: 40,),
+            AllExpensesAndQuickInvoiceSection(),
+          ],
+        )),
         SizedBox(width: 24),
         Expanded(
           child: SingleChildScrollView(
