@@ -25,7 +25,7 @@ class CardItem extends StatelessWidget {
           ),
         ),
         child: Container(
-          padding: EdgeInsets.only(top: 20, bottom: 27, left: 31, right: 24),
+          padding: EdgeInsets.only(top: 15, bottom: 10, left: 25, right: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,19 +43,22 @@ class CardItem extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 20),
+              Flexible(child: SizedBox(height: 20)),
 
               Text(
                 card.cardNumber,
                 style: AppStyle.styleSemiBold24(context).copyWith(color: Colors.white),
               ),
 
-              SizedBox(height: 8),
+              Flexible(child: SizedBox(height: 8)),
 
               Text(
                 '${card.expiredDate} - ${card.cvv}',
                 style: AppStyle.styleRegular16(context).copyWith(color: Colors.white),
               ),
+
+              Flexible(child: SizedBox(height: 10)),
+
             ],
           ),
         ),
