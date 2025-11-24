@@ -59,24 +59,35 @@ class ActiveItem extends StatelessWidget {
               ],
             ),
             SizedBox(height: 34),
-            Text(
-              item.title,
-              style: AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                item.title,
+                style: AppStyle.styleSemiBold16(
+                  context,
+                ).copyWith(color: Colors.white),
+              ),
             ),
             SizedBox(height: 8),
 
-            Text(
-              item.date,
-              style: AppStyle.styleRegular14(context).copyWith(
-                color: const Color(0xFFFAFAFA),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                item.date,
+                style: AppStyle.styleRegular14(
+                  context,
+                ).copyWith(color: const Color(0xFFFAFAFA)),
               ),
             ),
             SizedBox(height: 16),
 
-            Text(
-              '\$${item.amount}',
-              style: AppStyle.styleSemiBold24(context).copyWith(
-                color: const Color(0xFFFAFAFA),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                '\$${item.amount}',
+                style: AppStyle.styleSemiBold24(
+                  context,
+                ).copyWith(color: const Color(0xFFFAFAFA)),
               ),
             ),
           ],
@@ -142,13 +153,25 @@ class InActiveItem extends StatelessWidget {
               ],
             ),
             SizedBox(height: 34),
-            Text(item.title, style: AppStyle.styleSemiBold16(context)),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(item.title, style: AppStyle.styleSemiBold16(context)),
+            ),
             SizedBox(height: 8),
 
-            Text(item.date, style: AppStyle.styleRegular14(context)),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(item.date, style: AppStyle.styleRegular14(context)),
+            ),
             SizedBox(height: 16),
 
-            Text('\$${item.amount}', style: AppStyle.styleSemiBold24(context)),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                '\$${item.amount}',
+                style: AppStyle.styleSemiBold24(context),
+              ),
+            ),
           ],
         ),
       ),

@@ -48,11 +48,7 @@ class _AllExpensesListState extends State<AllExpensesList> {
               }
             },
             child: Padding(
-              padding: index == 1
-                  ? EdgeInsetsGeometry.symmetric(horizontal: 6)
-                  : index == 0
-                  ? EdgeInsetsGeometry.only(right: 6)
-                  : EdgeInsetsGeometry.only(left: 6),
+              padding: EdgeInsetsGeometry.symmetric(horizontal: 3),
               child: ExpensesCardItem(
                 item: item,
                 isActive: index == currentIndex,
