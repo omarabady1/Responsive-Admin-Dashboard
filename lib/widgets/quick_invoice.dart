@@ -20,7 +20,7 @@ class QuickInvoice extends StatelessWidget {
         children: [
           QuickInvoiceHeader(),
           SizedBox(height: 24),
-          Text('Latest Transactions', style: AppStyle.styleMedium16),
+          Text('Latest Transactions', style: AppStyle.styleMedium16(context)),
           SizedBox(height: 12),
           LatestTransactionsList(),
           Divider(color: const Color(0xffF1F1F1), height: 48,),

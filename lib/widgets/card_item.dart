@@ -35,7 +35,7 @@ class CardItem extends StatelessWidget {
                 children: [
                   Text(
                     card.holderName,
-                    style: AppStyle.styleRegular16.copyWith(
+                    style: AppStyle.styleRegular16(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
@@ -47,14 +47,14 @@ class CardItem extends StatelessWidget {
 
               Text(
                 card.cardNumber,
-                style: AppStyle.styleSemiBold24.copyWith(color: Colors.white),
+                style: AppStyle.styleSemiBold24(context).copyWith(color: Colors.white),
               ),
 
               SizedBox(height: 8),
 
               Text(
                 '${card.expiredDate} - ${card.cvv}',
-                style: AppStyle.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyle.styleRegular16(context).copyWith(color: Colors.white),
               ),
             ],
           ),

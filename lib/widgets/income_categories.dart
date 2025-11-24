@@ -45,10 +45,10 @@ class IncomeCategoryItem extends StatelessWidget {
         height: 12,
         decoration: ShapeDecoration(color: item.color, shape: OvalBorder()),
       ),
-      title: Text(item.title, style: AppStyle.styleRegular16),
+      title: Text(item.title, style: AppStyle.styleRegular16(context)),
       trailing: Text(
         '${item.percentage}%',
-        style: AppStyle.styleMedium16.copyWith(color: const Color(0xFF208CC8)),
+        style: AppStyle.styleMedium16(context).copyWith(color: const Color(0xFF208CC8)),
       ),
     );
   }

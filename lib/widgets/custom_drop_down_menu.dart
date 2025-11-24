@@ -27,7 +27,7 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
           borderRadius: BorderRadius.circular(12),
           icon: Icon(Icons.keyboard_arrow_down, color: const Color(0xff064061)),
           value: selectedPeriod,
-          style: AppStyle.styleMedium16,
+          style: AppStyle.styleMedium16(context),
           items: [
             DropdownMenuItem<String>(value: 'Weekly', child: Text('Weekly')),
             DropdownMenuItem<String>(value: 'Monthly', child: Text('Monthly')),

@@ -32,8 +32,8 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           title: activeIndex == 0 ? 'Design Service' : '40%',
           titleStyle: activeIndex == 0
-              ? AppStyle.styleSemiBold16
-              : AppStyle.styleSemiBold16.copyWith(color: Colors.white),
+              ? AppStyle.styleSemiBold16(context)
+              : AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
           titlePositionPercentageOffset: activeIndex == 0 ? 1.4 : null,
           radius: activeIndex == 0 ? 50 : 45,
           value: 40,
@@ -42,8 +42,8 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           titleStyle: activeIndex == 1
-              ? AppStyle.styleSemiBold16
-              : AppStyle.styleSemiBold16.copyWith(color: Colors.white),
+              ? AppStyle.styleSemiBold16(context)
+              : AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
           title: activeIndex == 1 ? 'Design Production' : '25%',
           titlePositionPercentageOffset: activeIndex == 1 ? -1.3 : null,
           radius: activeIndex == 1 ? 50 : 45,
@@ -53,8 +53,8 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           titleStyle: activeIndex == 2
-              ? AppStyle.styleSemiBold16
-              : AppStyle.styleSemiBold16.copyWith(color: Colors.white),
+              ? AppStyle.styleSemiBold16(context)
+              : AppStyle.styleSemiBold16(context).copyWith(color: Colors.white),
           title: activeIndex == 2 ? 'Product Royalty' : '20%',
           titlePositionPercentageOffset: activeIndex == 2 ? 1.3 : null,
           radius: activeIndex == 2 ? 50 : 45,
@@ -64,8 +64,8 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           titleStyle: activeIndex == 3
-              ? AppStyle.styleSemiBold16
-              : AppStyle.styleSemiBold16.copyWith(color:  const Color(0xFF064060)),
+              ? AppStyle.styleSemiBold16(context)
+              : AppStyle.styleSemiBold16(context).copyWith(color:  const Color(0xFF064060)),
           title: activeIndex == 3 ? 'Other' : '15%',
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
           radius: activeIndex == 3 ? 50 : 45,

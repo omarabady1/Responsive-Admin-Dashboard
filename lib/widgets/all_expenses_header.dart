@@ -13,7 +13,7 @@ class AllExpensesHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('All Expenses', style: AppStyle.styleSemiBold20),
+        Text('All Expenses', style: AppStyle.styleSemiBold20(context)),
         CustomDropDownMenu()
       ],
     );
